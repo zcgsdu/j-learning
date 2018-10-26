@@ -8,6 +8,7 @@ public class Debugging{
         List<Point> points = Arrays.asList(new Point(12, 2), null);
         points.stream().map(p -> p.getX()).forEach(System.out::println);
         System.out.println(1111);
+        System.out.println(2222);
     }
 
 
