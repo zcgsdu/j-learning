@@ -16,7 +16,7 @@ public class LambdaScopeTest {
             // the error "local variables referenced from a lambda expression
             // must be final or effectively final" in statement A:
             //
-            // x = 99;
+//             x = 99;
             
             Consumer<Integer> myConsumer = (y) -> 
             {

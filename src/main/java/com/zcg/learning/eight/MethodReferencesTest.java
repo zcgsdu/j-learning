@@ -2,6 +2,7 @@ package com.zcg.learning.eight;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
@@ -27,7 +28,7 @@ public class MethodReferencesTest {
       
     public static void main(String... args) {
 
-        List<Person> roster = Person.createRoster();        
+        List<Person> roster = Person.createRoster();   
 
         Person[] rosterAsArray = 
             roster.toArray(new Person[roster.size()]);
@@ -53,7 +54,6 @@ public class MethodReferencesTest {
         
         // With method reference
         Arrays.sort(rosterAsArray, Person::compareByAge);
-        
         
         
         // Reference to an instance method of a particular object
@@ -87,7 +87,7 @@ public class MethodReferencesTest {
         Set<Person> rosterSetLambda =
             transferElements(roster, () -> { return new HashSet<>(); });
         rosterSetLambda.stream().forEach(p -> p.printPerson());
-        
+
         Set<Person> rosterSet = transferElements(
             roster, HashSet::new);
         System.out.println("Printing rosterSet:");

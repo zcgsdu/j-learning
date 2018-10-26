@@ -35,8 +35,18 @@ public class Test {
 //		String sss = "aaa\\ccc\\vb.pdf";
 //	    System.out.println(sss.replace("\\", "/"));
 		
-		BigDecimal s = new BigDecimal("4360538.60 ");
-		System.out.println(s);
+//		BigDecimal s = new BigDecimal("4360538.60 ");
+//		System.out.println(s);
+		
+		//字符串三位空格分开
+		String faxReceiveAccountHolder = "123456776";
+		String regex = "(.{3})";
+		faxReceiveAccountHolder = faxReceiveAccountHolder.replaceAll(regex, "$1 ");
+		System.out.println(faxReceiveAccountHolder);
+		
+		//数字分隔
+		DecimalFormat df = new DecimalFormat("#,###.00"); 
+        System.out.println(df.format(12345678.01));
 	}
 }
  
